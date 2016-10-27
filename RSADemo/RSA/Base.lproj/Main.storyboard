@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="gFm-qs-7Ta">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--加密-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Voq-DR-gq6">
+                                <rect key="frame" x="285" y="166" width="30" height="30"/>
+                                <state key="normal" title="加密"/>
+                                <connections>
+                                    <action selector="encrypteMessageAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xT0-nR-dUc"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="RJg-W5-rHO">
+                                <rect key="frame" x="20" y="204" width="560" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="0OD-js-GtD"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="3Lz-Ue-HAg">
+                                <rect key="frame" x="20" y="390" width="560" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="qcu-j0-lZJ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="7ps-lS-fL1">
+                                <rect key="frame" x="20" y="72" width="560" height="86"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="86" id="Knj-9t-Vn7"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JxG-lX-NFn">
+                                <rect key="frame" x="285" y="348" width="30" height="30"/>
+                                <state key="normal" title="解密"/>
+                                <connections>
+                                    <action selector="decrypteMessageAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qRx-if-bXI"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="leadingMargin" secondItem="3Lz-Ue-HAg" secondAttribute="leading" id="BDq-A0-xI3"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="RJg-W5-rHO" secondAttribute="trailing" id="MTD-TL-hlK"/>
+                            <constraint firstItem="Voq-DR-gq6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="O69-Ci-Fox"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="7ps-lS-fL1" secondAttribute="leading" id="TdX-d4-JDt"/>
+                            <constraint firstItem="RJg-W5-rHO" firstAttribute="top" secondItem="Voq-DR-gq6" secondAttribute="bottom" constant="8" id="Tgv-6T-dOZ"/>
+                            <constraint firstItem="7ps-lS-fL1" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="cs8-lY-4d6"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="3Lz-Ue-HAg" secondAttribute="trailing" id="hZc-Zv-W9d"/>
+                            <constraint firstItem="JxG-lX-NFn" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="iF8-Ot-c8Y"/>
+                            <constraint firstItem="3Lz-Ue-HAg" firstAttribute="top" secondItem="JxG-lX-NFn" secondAttribute="bottom" constant="12" id="lOo-zo-UZ2"/>
+                            <constraint firstItem="JxG-lX-NFn" firstAttribute="top" secondItem="RJg-W5-rHO" secondAttribute="bottom" constant="16" id="lPo-bd-YNI"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="7ps-lS-fL1" secondAttribute="trailing" id="ndo-aw-0Dm"/>
+                            <constraint firstItem="Voq-DR-gq6" firstAttribute="top" secondItem="7ps-lS-fL1" secondAttribute="bottom" constant="8" id="rV7-g2-8ym"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="RJg-W5-rHO" secondAttribute="leading" id="si6-mI-MNr"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="加密" id="riT-RR-Zrf">
+                        <barButtonItem key="rightBarButtonItem" title="加密方式" id="qWf-Le-Jx1">
+                            <connections>
+                                <action selector="chooseEncytorMethodAction:" destination="BYZ-38-t0r" id="DOG-BC-8f8"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="decrypteMessageTextView" destination="3Lz-Ue-HAg" id="PYH-1M-1ts"/>
+                        <outlet property="encrypteMessageTextView" destination="RJg-W5-rHO" id="5eR-8e-o3t"/>
+                        <outlet property="messageTextView" destination="7ps-lS-fL1" id="l7b-ij-6mk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1057" y="223"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Rvm-4b-jNY">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gFm-qs-7Ta" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="fiZ-Ly-T0p">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="TMo-Lu-wtt"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sXR-D2-gjN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="245" y="223"/>
+        </scene>
+    </scenes>
+</document>
